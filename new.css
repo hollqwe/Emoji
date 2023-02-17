@@ -1,0 +1,154 @@
+@import url('./reset.css');
+
+.main {
+    width: 1440px;
+    height: 866px;
+    margin: 0 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    background-color: #EDEEF3;
+}
+.mx-auto {
+    margin: 0 auto;
+}
+
+.header {
+    width: 1440px;
+    height: 295px;
+    background: linear-gradient(92.33deg, #087990 0.12%, #055160 100%);
+    position: relative;
+    padding-top: 68px;
+}
+.header__title {
+    width: 435px;
+    height: 87px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 87px;
+    color: #CFF4FC;
+}
+.header__subtitle {
+    width: 299px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 36px;
+    color: #CFF4FC;
+}
+
+
+.input_container {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 820px;
+    height: 64px;
+
+}
+.input {
+    width: 820px;
+    height: 64px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.input::placeholder {
+    color: #ABB5BE;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 21px;
+   }
+
+.input:focus {
+    outline: none;
+  }
+
+  .container {
+    margin-top: 80px;
+  }
+.grid {
+    padding:10px 0;
+     width: 1440px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: ;
+     grid-column-gap: 19px;
+     grid-row-gap: 22px;
+     gap: 1em;
+ }
+
+ .box {
+    border: 2px solid #DEE2E6;
+    border-radius: 4px;
+    width: 316px;
+    height: 186px;
+    background-color: white;
+}
+
+
+
+.content {
+    width: 316px;
+    height: 186px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    
+}
+
+.symbol {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    margin: 24px 134px 112px 134px;
+    
+}
+
+.title {
+    position: absolute;
+    width: 32px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    color: #000000;
+    margin: 90px 142px 66px 142px;
+    
+}
+
+.keywords {
+    position: absolute;
+    width: 268px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 12px; 
+    line-height: 15px;
+    text-align: center;
+    color: #3F444A;
+    margin: 130px 24px 24px 24px;
+    
+}
+
+@media (max-width: 1000px) {
+    .input {
+      width: 80%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 316px 316px;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 300px;
+      justify-content: center;
+    }
+  }
