@@ -1,9 +1,6 @@
 @import url('./reset.css');
 
-.main {
-    width: 1440px;
-    height: 866px;
-    margin: 0 auto;
+body {
     font-family: 'Inter';
     font-style: normal;
     background-color: #EDEEF3;
@@ -13,7 +10,7 @@
 }
 
 .header {
-    width: 1440px;
+    width: 100vw;
     height: 295px;
     background: linear-gradient(92.33deg, #087990 0.12%, #055160 100%);
     position: relative;
@@ -51,22 +48,30 @@
     height: 64px;
     border: 1px solid black;
     border-radius: 4px;
+    font-size: 32px;
 }
+
 .input::placeholder {
     color: #ABB5BE;
     font-weight: 400;
     font-size: 24px;
     line-height: 21px;
+    
    }
 
-.input:focus {
+/* .input:focus {
     outline: none;
-  }
+  } */
+
+
+.main {
+    min-height: calc(100vh - 295px);
+}
 
   .container {
     margin-top: 80px;
   }
-  /* грид не работает на эмоджи */
+
 .grid {
     padding:10px 0;
      width: 1440px;
@@ -89,6 +94,9 @@
 
 
 .content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
     width: 316px;
     height: 186px;
     box-sizing: border-box;
@@ -99,38 +107,56 @@
 }
 
 .symbol {
-    position: absolute;
-    width: 48px;
-    height: 48px;
     font-weight: 400;
     font-size: 48px;
     line-height: 48px;
-    margin: 24px 134px 112px 134px;
+    text-align: center;
+    margin-bottom: 18px;
+    
     
 }
 
 .title {
-    position: absolute;
-    width: 32px;
-    height: 28px;
     font-weight: 700;
     font-size: 17px;
     line-height: 28px;
     text-decoration-line: underline;
     color: #000000;
-    margin: 90px 142px 66px 142px;
+    text-align: center;
+    margin-bottom: 12px;
+   
     
 }
 
 .keywords {
-    position: absolute;
-    width: 268px;
-    height: 30px;
     font-weight: 400;
     font-size: 12px; 
     line-height: 15px;
     text-align: center;
     color: #3F444A;
-    margin: 130px 24px 24px 24px;
+    text-align: center;
     
+}
+
+footer {
+margin: 0 auto;
+width: 986px;
+height: 35px;
+}
+
+.footer_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #6C757D;
+}
+
+.rectangle {
+width: 986px;
+height: 1px;
+background: #CED4DA;
+
 }

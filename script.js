@@ -1,7 +1,8 @@
 import { data } from './data.js';
 
-const grid = document.createElement('div')
-document.body.append(grid);
+const grid = document.querySelector('.grid');
+// document.body.append(grid);
+const input = document.querySelector('input');
 
 function Box(data) {
     for (let el of data) {
@@ -31,3 +32,21 @@ function createCard (obj) {
     wrap.append(symbol, title, keywords);
     grid.append(wrap);
   }
+  
+
+  function inputSearch(event) {
+    grid.innerHTML = "";
+    let value = event.target.value.toLowerCase().trim();
+    data
+    .filter(
+        (item) => 
+        item.title.toLowerCase().trim().includes(value) || 
+        item.keywords.toLowerCase().trim().includes(value)
+        )
+    .forEach((item) => grid.append(createCard(item)));
+  }
+    
+
+input.addEventListener('input', inputSearch);
+
+data.forEach((card) => grid.append(createCard(card)));
