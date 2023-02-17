@@ -66,6 +66,7 @@
   .container {
     margin-top: 80px;
   }
+  /* грид не работает на эмоджи */
 .grid {
     padding:10px 0;
      width: 1440px;
@@ -133,22 +134,3 @@
     margin: 130px 24px 24px 24px;
     
 }
-
-@media (max-width: 1000px) {
-    .input {
-      width: 80%;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 316px 316px;
-      justify-content: center;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .grid {
-      display: grid;
-      grid-template-columns: 300px;
-      justify-content: center;
-    }
-  }
